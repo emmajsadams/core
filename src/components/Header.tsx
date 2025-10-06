@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router'
-import { User } from 'lucide-react'
+import { NAME } from '../../config/personalDetails'
 
 export default function Header() {
   return (
@@ -9,19 +9,15 @@ export default function Header() {
           to="/" 
           className="flex items-center gap-3 text-white hover:text-cyan-400 transition-colors"
         >
-          <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center">
-            <User className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-xl font-semibold">Your Name</span>
+          <img 
+            src="/emma.jpg" 
+            alt="Emma Adams" 
+            className="w-8 h-8 rounded-full object-cover"
+          />
+          <span className="text-xl font-semibold">{NAME}</span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-6">
-          <a 
-            href="#about" 
-            className="text-gray-300 hover:text-cyan-400 transition-colors"
-          >
-            About
-          </a>
           <a 
             href="#experience" 
             className="text-gray-300 hover:text-cyan-400 transition-colors"
@@ -29,16 +25,22 @@ export default function Header() {
             Experience
           </a>
           <a 
-            href="#skills" 
-            className="text-gray-300 hover:text-cyan-400 transition-colors"
-          >
-            Skills
-          </a>
-          <a 
             href="#education" 
             className="text-gray-300 hover:text-cyan-400 transition-colors"
           >
             Education
+          </a>
+          <a 
+            href="#projects" 
+            className="text-gray-300 hover:text-cyan-400 transition-colors"
+          >
+            Projects
+          </a>
+          <a 
+            href="#skills" 
+            className="text-gray-300 hover:text-cyan-400 transition-colors"
+          >
+            Skills
           </a>
         </nav>
       </div>

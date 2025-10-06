@@ -3,7 +3,7 @@ import { NAME, EMAIL, TITLE, PHONE_NUMBER, GITHUB, LINKEDIN, TWITTER } from '../
 import experiences from '../../config/experiences'
 import projects from '../../config/projects'
 import schools from '../../config/schools'
-import technologies from '../../config/technologies'
+import technologies from '../../config/skills'
 
 export interface SocialLink {
   name: string

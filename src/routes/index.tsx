@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { User, Mail, Phone, Github, Linkedin, Twitter, ExternalLink } from 'lucide-react'
+import { Mail, Phone, Github, Linkedin, Twitter, ExternalLink, Download } from 'lucide-react'
 import { personalInfo, socialLinks, education, experience, portfolioProjects, skills } from '../data/portfolio'
+import { PDF_RESUME_NAME } from '../../config/personalDetails'
 
 export const Route = createFileRoute('/')({
   component: Resume,
@@ -20,9 +21,6 @@ function Resume() {
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-4xl mx-auto px-6 py-12">
         <header className="text-center mb-12">
-          <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center">
-            <User className="w-16 h-16 text-white" />
-          </div>
           <h1 className="text-5xl font-bold text-white mb-2">{personalInfo.name}</h1>
           <p className="text-xl text-cyan-400 mb-4">{personalInfo.title}</p>
           <div className="flex flex-wrap justify-center gap-4 text-gray-300">
@@ -35,7 +33,7 @@ function Resume() {
               <span>{personalInfo.phone}</span>
             </div>
           </div>
-          <div className="flex justify-center gap-4 mt-4">
+          <div className="flex flex-wrap justify-center gap-4 mt-4">
             {socialLinks.map((link) => {
               const IconComponent = getIcon(link.icon)
               return (
@@ -52,6 +50,14 @@ function Resume() {
                 </a>
               )
             })}
+            <a 
+              href={`/${PDF_RESUME_NAME}.pdf`}
+              download
+              className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+            >
+              <Download className="w-5 h-5" />
+              <span>Download Resume</span>
+            </a>
           </div>
         </header>
 
@@ -151,7 +157,7 @@ function Resume() {
                 <div key={index}>
                   <h3 className="text-lg font-semibold text-cyan-400 mb-3">{skillCategory.category}</h3>
                   <div className="flex flex-wrap gap-2">
-                    {skillCategory.technologies.map((tech) => (
+                    {skillCategory.skills.map((tech) => (
                       <span key={tech} className="px-3 py-1 bg-slate-700 text-gray-300 rounded-full text-sm">
                         {tech}
                       </span>

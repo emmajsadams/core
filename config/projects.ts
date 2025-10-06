@@ -9,25 +9,6 @@ export interface Project {
 	description: string[]
 }
 
-export const PersonalWebsite: Project = {
-	title: 'Personal Website',
-	url: `${PROJECT_URL}/personal-website`,
-	technologies: [
-		'TypeScript',
-		'Next.JS',
-		'TailwindCSS',
-		'Docker',
-		'Node.js',
-		'MDX',
-		'React',
-	],
-	description: [
-		'Next.JS powered blog and resume website adhering to modern web development standards.',
-		'High performance and no JavaScript support is enabled due to a hybrid model of server-side and client-side rendering.',
-		'Blog using MDX files for easy maintenance and richly formatted posts.',
-	],
-}
-
 export const Grimoire: Project = {
 	title: 'Grimoire',
 	url: `${PROJECT_URL}/grimoire`,
@@ -141,6 +122,25 @@ export const AutocompleteComparison: Project = {
 	],
 }
 
+export const Minerva: Project = {
+	title: 'Minerva',
+	url: `${PROJECT_URL}/minerva`,
+	technologies: [
+		'TypeScript',
+		'React',
+		'Next.JS',
+		'TailwindCSS',
+		'Convex',
+		'Bun',
+		'Vercel',
+	],
+	description: [
+		'Personal productivity application featuring task management, note storage, and AI integration.',
+		'Real-time data synchronization with Convex backend and sortable task management with rich markdown descriptions.',
+		'Features oceanic design with glass morphism effects and fluid animations.',
+	],
+}
+
 export const TypeScriptDatabase: Project = {
 	title: 'TypeScript Database',
 	url: `${PROJECT_URL}/ts-database`,
@@ -159,7 +159,7 @@ export const TypeScriptDatabase: Project = {
 
 // TODO: Consider FlightSearcher, Checkout?
 export default [
-	PersonalWebsite,
+	Minerva,
 	TypeScriptDatabase,
 	Grimoire,
 	DiscordManagementBot,

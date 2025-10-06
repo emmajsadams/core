@@ -10,6 +10,23 @@ export interface Experience {
 	description: string[]
 }
 
+export const Supio: Experience = {
+	title: 'Senior Software Engineer Lead',
+	institution: 'Supio',
+	institutionUrl: 'https://supio.com',
+	location: 'Remote',
+	start: 'Feb. 2025',
+	end: 'Present',
+	description: [
+		'Lead a team of 5 engineers through agile sprints, technical planning, and cross-functional collaboration with product, sales, and marketing to deliver AI-driven legal tools.',
+		'Architected an LLM workflow orchestration system in TypeScript integrated with Claude and OpenAI models for rapid deployment of legal document blueprints using context management and prompt engineering best practices.',
+		'Built and deployed legal drafting agents in Python (smolagents, LangChain) for automated document generation and review.',
+		'Designed a cursor-style drafting interface integrating AI RAG chat for real-time verification and natural-language editing.',
+		'Delivered a full drafting suite—including expert disclosure, demand letter, and medical summary generators—adopted by 20+ law firms within the first quarter, improving drafting speed and consistency across client workflows.',
+		'Led the integration of coding agents like Codex and Claude Code, establishing best practices for secure, efficient, and maintainable AI-assisted development workflows.',
+	],
+}
+
 export const HPE: Experience = {
 	title: 'Senior Software Engineer',
 	institution: 'Hewlett Packard Enterprise',
@@ -167,6 +184,7 @@ export const SmiteWorksSoftwareEngineer: Experience = {
 }
 
 export default [
+	Supio,
 	HPE,
 	DevotedHealth,
 	Freelance,
