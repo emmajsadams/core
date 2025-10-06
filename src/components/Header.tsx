@@ -7,7 +7,7 @@ export default function Header() {
       <div className="max-w-4xl mx-auto flex items-center justify-between">
         <Link 
           to="/" 
-          className="flex items-center gap-3 text-white hover:text-cyan-400 transition-colors"
+          className="flex items-center gap-3 text-white hover:text-purple-400 transition-colors"
         >
           <img 
             src="/emma.jpg" 
@@ -20,25 +20,25 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-6">
           <a 
             href="#experience" 
-            className="text-gray-300 hover:text-cyan-400 transition-colors"
+            className="text-gray-300 hover:text-purple-400 transition-colors"
           >
             Experience
           </a>
           <a 
             href="#education" 
-            className="text-gray-300 hover:text-cyan-400 transition-colors"
+            className="text-gray-300 hover:text-purple-400 transition-colors"
           >
             Education
           </a>
           <a 
             href="#projects" 
-            className="text-gray-300 hover:text-cyan-400 transition-colors"
+            className="text-gray-300 hover:text-purple-400 transition-colors"
           >
             Projects
           </a>
           <a 
             href="#skills" 
-            className="text-gray-300 hover:text-cyan-400 transition-colors"
+            className="text-gray-300 hover:text-purple-400 transition-colors"
           >
             Skills
           </a>

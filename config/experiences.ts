@@ -11,7 +11,7 @@ export interface Experience {
 }
 
 export const Supio: Experience = {
-	title: 'Senior Software Engineer Lead',
+	title: 'Lead Senior Software Engineer',
 	institution: 'Supio',
 	institutionUrl: 'https://supio.com',
 	location: 'Remote',

@@ -17,6 +17,25 @@ To build this application for production:
 npm run build
 ```
 
+# Deployment
+
+This application is configured for Cloudflare Workers deployment following the [TanStack Start Cloudflare hosting guide](https://tanstack.com/start/latest/docs/framework/react/hosting).
+
+To deploy to Cloudflare Workers:
+
+```bash
+pnpm run build && pnpm run deploy
+```
+
+The deployment process:
+1. `pnpm run build` - Builds the application for production
+2. `pnpm run deploy` - Deploys to Cloudflare Workers using wrangler
+
+Make sure you have:
+- Wrangler CLI installed and authenticated with your Cloudflare account
+- Custom domain configured in `wrangler.jsonc` if using a custom domain
+- Proper environment variables and secrets configured in Cloudflare dashboard if needed
+
 ## Testing
 
 This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:

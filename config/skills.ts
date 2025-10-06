@@ -1,4 +1,3 @@
-// TODO: Refactor this to be about technical skills, not technologies
 export interface SkillCategory {
 	category: string
 	skills: string[]
@@ -6,7 +5,7 @@ export interface SkillCategory {
 
 export const ProgrammingLanguages: SkillCategory = {
 	category: 'Programming Languages',
-	skills: ['C', 'C#', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'Bash'],
+	skills: ['Python', 'TypeScript', 'C#', 'Go', 'SQL', 'Bash'],
 }
 
 export const WebDevelopment: SkillCategory = {
@@ -30,7 +29,19 @@ export const WebDevelopment: SkillCategory = {
 
 export const DataAndAI: SkillCategory = {
 	category: 'Data & AI',
-	skills: ['pandas', 'NumPy', 'TensorFlow', 'Elasticsearch'],
+	skills: [
+		'OpenAI API',
+		'Claude API',
+		'Codex',
+		'smolagents',
+		'LangChain',
+		'LangSmith',
+		'RAG',
+		'pandas',
+		'NumPy',
+		'TensorFlow',
+		'Elasticsearch',
+	],
 }
 
 export const CloudAndDevOps: SkillCategory = {
@@ -55,12 +66,7 @@ export const Databases: SkillCategory = {
 
 export const DeveloperExperience: SkillCategory = {
 	category: 'Developer Experience & Tooling',
-	skills: ['Git', 'ESLint', 'Prettier', 'npm', 'webpack', 'Visual Studio', 'VSCode'],
-}
-
-export const SystemsAndEnvironments: SkillCategory = {
-	category: 'Systems & Environments',
-	skills: ['GNU/Linux', 'MacOS', 'Windows', 'ChromeOS', 'gcc'],
+	skills: ['Claude Code', 'Cursor', 'VSCode', 'Cursor', 'Git', 'Linux', 'npm', 'pnpm', 'vite', 'webpack', 'ESLint', 'Prettier'],
 }
 
 export const SoftSkills: SkillCategory = {
@@ -80,6 +86,5 @@ export default [
 	CloudAndDevOps,
 	Databases,
 	DeveloperExperience,
-	SystemsAndEnvironments,
 	SoftSkills,
 ]

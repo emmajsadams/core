@@ -22,7 +22,7 @@ function Resume() {
       <div className="max-w-4xl mx-auto px-6 py-12">
         <header className="text-center mb-12">
           <h1 className="text-5xl font-bold text-white mb-2">{personalInfo.name}</h1>
-          <p className="text-xl text-cyan-400 mb-4">{personalInfo.title}</p>
+          <p className="text-xl text-purple-400 mb-4">{personalInfo.title}</p>
           <div className="flex flex-wrap justify-center gap-4 text-gray-300">
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
@@ -42,7 +42,7 @@ function Resume() {
                   href={link.url} 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                  className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   <IconComponent className="w-5 h-5" />
                   <span>{link.name}</span>
@@ -53,7 +53,7 @@ function Resume() {
             <a 
               href={`/${PDF_RESUME_NAME}.pdf`}
               download
-              className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+              className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
             >
               <Download className="w-5 h-5" />
               <span>Download Resume</span>
@@ -70,8 +70,8 @@ function Resume() {
                   <div className="flex justify-between items-start mb-4">
                     <div>
                       <h3 className="text-xl font-semibold text-white">{job.title}</h3>
-                      <p className="text-cyan-400">
-                        <a href={job.institutionUrl} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300">
+                      <p className="text-blue-400">
+                        <a href={job.institutionUrl} target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
                           {job.institution}
                         </a>
                       </p>
@@ -97,8 +97,8 @@ function Resume() {
                   <div className="flex justify-between items-start mb-4">
                     <div>
                       <h3 className="text-xl font-semibold text-white">{school.degree}</h3>
-                      <p className="text-cyan-400">
-                        <a href={school.url} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300">
+                      <p className="text-blue-400">
+                        <a href={school.url} target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
                           {school.institution}
                         </a>
                       </p>
@@ -128,7 +128,7 @@ function Resume() {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer" 
-                      className="text-cyan-400 hover:text-cyan-300"
+                      className="text-blue-400 hover:text-blue-300"
                     >
                       <ExternalLink className="w-5 h-5" />
                     </a>
@@ -155,7 +155,7 @@ function Resume() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {skills.map((skillCategory, index) => (
                 <div key={index}>
-                  <h3 className="text-lg font-semibold text-cyan-400 mb-3">{skillCategory.category}</h3>
+                  <h3 className="text-lg font-semibold text-purple-400 mb-3">{skillCategory.category}</h3>
                   <div className="flex flex-wrap gap-2">
                     {skillCategory.skills.map((tech) => (
                       <span key={tech} className="px-3 py-1 bg-slate-700 text-gray-300 rounded-full text-sm">

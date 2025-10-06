@@ -3,193 +3,192 @@ import { StyleSheet } from '@react-pdf/renderer'
 export const styles = StyleSheet.create({
   page: {
     fontFamily: 'Helvetica',
-    fontSize: 10,
-    paddingTop: 35,
-    paddingLeft: 35,
-    paddingRight: 35,
-    paddingBottom: 65,
-    lineHeight: 1.4,
+    fontSize: 9,
+    paddingTop: 20,
+    paddingLeft: 25,
+    paddingRight: 25,
+    paddingBottom: 25,
+    lineHeight: 1.2,
   },
   
   // Header styles
   header: {
-    marginBottom: 20,
+    marginBottom: 8,
     textAlign: 'center',
   },
   name: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 5,
+    marginBottom: 4,
     color: '#1f2937',
   },
   title: {
-    fontSize: 14,
+    fontSize: 12,
     color: '#374151',
-    marginBottom: 10,
+    marginBottom: 8,
   },
   contactInfo: {
     flexDirection: 'row',
     justifyContent: 'center',
-    gap: 15,
-    marginBottom: 5,
+    gap: 12,
   },
   contactItem: {
-    fontSize: 9,
+    fontSize: 8,
     color: '#6b7280',
   },
   socialLinks: {
     flexDirection: 'row',
     justifyContent: 'center',
-    gap: 15,
-    marginTop: 5,
+    gap: 12,
+    marginTop: 3,
   },
   socialLink: {
-    fontSize: 9,
+    fontSize: 8,
     color: '#2563eb',
     textDecoration: 'none',
   },
 
   // Section styles
   section: {
-    marginBottom: 18,
+    marginBottom: 10,
   },
   sectionTitle: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: 'bold',
     color: '#1f2937',
-    marginBottom: 8,
+    marginBottom: 5,
     borderBottomWidth: 1,
     borderBottomColor: '#e5e7eb',
-    paddingBottom: 3,
+    paddingBottom: 2,
   },
 
   // Experience styles
   experienceItem: {
-    marginBottom: 12,
+    marginBottom: 8,
   },
   jobHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    marginBottom: 3,
+    marginBottom: 2,
   },
   jobTitle: {
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: 'bold',
     color: '#1f2937',
   },
   company: {
-    fontSize: 10,
+    fontSize: 9,
     color: '#2563eb',
     marginBottom: 1,
   },
   location: {
-    fontSize: 9,
+    fontSize: 8,
     color: '#6b7280',
   },
   dateRange: {
-    fontSize: 9,
+    fontSize: 8,
     color: '#6b7280',
     textAlign: 'right',
   },
   descriptionList: {
-    marginTop: 3,
-    marginLeft: 10,
+    marginTop: 2,
+    marginLeft: 8,
   },
   descriptionItem: {
-    fontSize: 9,
+    fontSize: 8,
     color: '#374151',
-    marginBottom: 2,
-    lineHeight: 1.3,
+    marginBottom: 1,
+    lineHeight: 1.2,
   },
 
   // Education styles
   educationItem: {
-    marginBottom: 10,
+    marginBottom: 6,
   },
   degree: {
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: 'bold',
     color: '#1f2937',
   },
   school: {
-    fontSize: 10,
+    fontSize: 9,
     color: '#2563eb',
   },
   educationDetails: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 2,
+    marginTop: 1,
   },
   gpa: {
-    fontSize: 9,
+    fontSize: 8,
     color: '#6b7280',
   },
   graduationYear: {
-    fontSize: 9,
+    fontSize: 8,
     color: '#6b7280',
   },
 
   // Projects styles
   projectItem: {
-    marginBottom: 10,
+    marginBottom: 6,
   },
   projectTitle: {
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: 'bold',
     color: '#1f2937',
-    marginBottom: 2,
+    marginBottom: 1,
   },
   projectDescription: {
-    fontSize: 9,
+    fontSize: 8,
     color: '#374151',
-    marginBottom: 3,
-    lineHeight: 1.3,
+    marginBottom: 2,
+    lineHeight: 1.2,
   },
   technologies: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 4,
-    marginTop: 3,
+    gap: 2,
+    marginTop: 2,
   },
   techTag: {
-    fontSize: 8,
+    fontSize: 7,
     color: '#374151',
     backgroundColor: '#f3f4f6',
-    paddingHorizontal: 6,
-    paddingVertical: 2,
-    borderRadius: 3,
+    paddingHorizontal: 4,
+    paddingVertical: 1,
+    borderRadius: 2,
   },
 
   // Skills styles
   skillsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 12,
+    gap: 8,
   },
   skillCategory: {
     width: '48%',
-    marginBottom: 8,
+    marginBottom: 5,
   },
   skillCategoryTitle: {
-    fontSize: 10,
+    fontSize: 9,
     fontWeight: 'bold',
     color: '#1f2937',
-    marginBottom: 4,
+    marginBottom: 2,
   },
   skillsList: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 3,
+    gap: 2,
   },
   skillItem: {
-    fontSize: 8,
+    fontSize: 7,
     color: '#374151',
     backgroundColor: '#f9fafb',
-    paddingHorizontal: 5,
-    paddingVertical: 2,
+    paddingHorizontal: 3,
+    paddingVertical: 1,
     borderRadius: 2,
-    marginBottom: 2,
+    marginBottom: 1,
   },
 
   // Utility styles

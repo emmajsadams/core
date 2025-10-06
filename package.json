@@ -8,6 +8,7 @@
     "serve": "vite preview",
     "test": "vitest run",
     "deploy": "wrangler deploy",
+    "deploy:prod": "pnpm run build && pnpm run generate-pdf && pnpm run deploy",
     "cf-typegen": "wrangler types",
     "generate-pdf": "tsx scripts/generate-pdf.ts"
   },

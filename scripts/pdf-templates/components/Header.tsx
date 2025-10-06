@@ -22,12 +22,9 @@ export const Header: React.FC<HeaderProps> = ({ name, title, email, phone, socia
       <View style={styles.contactInfo}>
         <Text style={styles.contactItem}>{email}</Text>
         <Text style={styles.contactItem}>{phone}</Text>
-      </View>
-      
-      <View style={styles.socialLinks}>
         {socialLinks.map((link, index) => (
           <Link key={index} src={link.url} style={styles.socialLink}>
-            {link.name}: {link.url.replace('https://', '')}
+            {link.url.replace('https://', '')}
           </Link>
         ))}
       </View>

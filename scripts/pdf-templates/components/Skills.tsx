@@ -4,7 +4,7 @@ import { styles } from '../styles'
 
 interface SkillCategory {
   category: string
-  technologies: string[]
+  skills: string[]
 }
 
 interface SkillsProps {
@@ -21,7 +21,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
           <View key={index} style={styles.skillCategory}>
             <Text style={styles.skillCategoryTitle}>{skillCategory.category}</Text>
             <View style={styles.skillsList}>
-              {skillCategory.technologies.map((skill, i) => (
+              {skillCategory.skills.map((skill, i) => (
                 <Text key={i} style={styles.skillItem}>{skill}</Text>
               ))}
             </View>
