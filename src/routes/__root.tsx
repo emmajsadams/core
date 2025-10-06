@@ -1,6 +1,8 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
-import { TanStackDevtools } from '@tanstack/react-devtools'
+
+// TODO: Fix production builds to disable this
+// import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
+// import { TanStackDevtools } from '@tanstack/react-devtools'
 
 import Header from '../components/Header'
 
@@ -17,7 +19,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Emma Adams - Senior Software Engineer',
+        title: 'Emma Adams - Lead Senior Software Engineer',
       },
     ],
     links: [
@@ -40,7 +42,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body>
         <Header />
         {children}
-        <TanStackDevtools
+        {/* <TanStackDevtools
           config={{
             position: 'bottom-right',
           }}
@@ -50,7 +52,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
               render: <TanStackRouterDevtoolsPanel />,
             },
           ]}
-        />
+        /> */}
         <Scripts />
       </body>
     </html>
