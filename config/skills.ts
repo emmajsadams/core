@@ -32,14 +32,14 @@ export const DataAndAI: SkillCategory = {
 	skills: [
 		'OpenAI API',
 		'Claude API',
-		'Codex',
 		'smolagents',
 		'LangChain',
 		'LangSmith',
 		'RAG',
 		'pandas',
 		'NumPy',
-		'TensorFlow',
+		'jupyter',
+		'PyTorch',
 		'Elasticsearch',
 	],
 }
