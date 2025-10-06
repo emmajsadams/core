@@ -1,5 +1,8 @@
 Welcome to your new TanStack app! 
 
+TODO:
+* Figure out how to disable tanstack 
+
 # Getting Started
 
 To run this application:
