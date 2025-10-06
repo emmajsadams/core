@@ -12,6 +12,10 @@
     {
       "pattern": "www.emmajsadams.com",
       "custom_domain": true
+    },
+    {
+      "pattern": "emma.adams.engineer",
+      "custom_domain": true
     }
   ]
 }
