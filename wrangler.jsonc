@@ -8,6 +8,10 @@
     {
       "pattern": "emmajsadams.com",
       "custom_domain": true
+    },
+    {
+      "pattern": "www.emmajsadams.com",
+      "custom_domain": true
     }
   ]
 }
