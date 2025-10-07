@@ -1,5 +1,13 @@
-import { NAME, EMAIL, TITLE, PHONE_NUMBER, GITHUB, LINKEDIN, TWITTER } from '../../config/personalDetails'
 import experiences from '../../config/experiences'
+import {
+  EMAIL,
+  GITHUB,
+  LINKEDIN,
+  NAME,
+  PHONE_NUMBER,
+  TITLE,
+  TWITTER,
+} from '../../config/personalDetails'
 import projects from '../../config/projects'
 import schools from '../../config/schools'
 import technologies from '../../config/skills'
@@ -53,17 +61,17 @@ export function loadResumeData(): ResumeData {
     },
     socialLinks: [
       {
-        name: "GitHub",
+        name: 'GitHub',
         url: `https://${GITHUB}`,
       },
       {
-        name: "LinkedIn",
+        name: 'LinkedIn',
         url: `https://${LINKEDIN}`,
       },
       {
-        name: "Twitter",
+        name: 'Twitter',
         url: `https://${TWITTER}`,
-      }
+      },
     ],
     experience: experiences,
     education: schools,

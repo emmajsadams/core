@@ -1,4 +1,4 @@
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+import { createRootRoute, HeadContent, Scripts } from '@tanstack/react-router'
 
 // TODO: Fix production builds to disable this
 // import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
@@ -26,6 +26,16 @@ export const Route = createRootRoute({
       {
         rel: 'stylesheet',
         href: appCss,
+      },
+      {
+        rel: 'icon',
+        href: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+      {
+        rel: 'icon',
+        href: '/favicon.ico',
+        sizes: 'any',
       },
     ],
   }),

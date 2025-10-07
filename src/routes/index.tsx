@@ -1,7 +1,14 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Mail, Phone, Github, Linkedin, Twitter, ExternalLink, Download } from 'lucide-react'
-import { personalInfo, socialLinks, education, experience, portfolioProjects, skills } from '../data/portfolio'
+import { Download, ExternalLink, Github, Linkedin, Mail, Phone, Twitter } from 'lucide-react'
 import { PDF_RESUME_NAME } from '../../config/personalDetails'
+import {
+  education,
+  experience,
+  personalInfo,
+  portfolioProjects,
+  skills,
+  socialLinks,
+} from '../data/portfolio'
 
 export const Route = createFileRoute('/')({
   component: Resume,
@@ -10,10 +17,14 @@ export const Route = createFileRoute('/')({
 function Resume() {
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'Github': return Github
-      case 'Linkedin': return Linkedin
-      case 'Twitter': return Twitter
-      default: return ExternalLink
+      case 'Github':
+        return Github
+      case 'Linkedin':
+        return Linkedin
+      case 'Twitter':
+        return Twitter
+      default:
+        return ExternalLink
     }
   }
 
@@ -37,9 +48,9 @@ function Resume() {
             {socialLinks.map((link) => {
               const IconComponent = getIcon(link.icon)
               return (
-                <a 
+                <a
                   key={link.name}
-                  href={link.url} 
+                  href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
@@ -50,7 +61,7 @@ function Resume() {
                 </a>
               )
             })}
-            <a 
+            <a
               href={`/${PDF_RESUME_NAME}.pdf`}
               download
               className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
@@ -63,7 +74,9 @@ function Resume() {
 
         <main className="space-y-12">
           <section id="experience">
-            <h2 className="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-2">Experience</h2>
+            <h2 className="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-2">
+              Experience
+            </h2>
             <div className="space-y-8">
               {experience.map((job, index) => (
                 <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
@@ -71,13 +84,20 @@ function Resume() {
                     <div>
                       <h3 className="text-xl font-semibold text-white">{job.title}</h3>
                       <p className="text-blue-400">
-                        <a href={job.institutionUrl} target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
+                        <a
+                          href={job.institutionUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-blue-300"
+                        >
                           {job.institution}
                         </a>
                       </p>
                       <p className="text-gray-400 text-sm">{job.location}</p>
                     </div>
-                    <span className="text-gray-400">{job.start} - {job.end}</span>
+                    <span className="text-gray-400">
+                      {job.start} - {job.end}
+                    </span>
                   </div>
                   <ul className="text-gray-300 space-y-2 list-disc list-inside">
                     {job.description.map((item, i) => (
@@ -90,7 +110,9 @@ function Resume() {
           </section>
 
           <section id="education">
-            <h2 className="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-2">Education</h2>
+            <h2 className="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-2">
+              Education
+            </h2>
             <div className="space-y-6">
               {education.map((school, index) => (
                 <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
@@ -98,14 +120,21 @@ function Resume() {
                     <div>
                       <h3 className="text-xl font-semibold text-white">{school.degree}</h3>
                       <p className="text-blue-400">
-                        <a href={school.url} target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
+                        <a
+                          href={school.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-blue-300"
+                        >
                           {school.institution}
                         </a>
                       </p>
                       <p className="text-gray-400 text-sm">{school.location}</p>
                       <p className="text-gray-400">GPA: {school.gpa}</p>
                     </div>
-                    <span className="text-gray-400">{school.startYear} - {school.endYear}</span>
+                    <span className="text-gray-400">
+                      {school.startYear} - {school.endYear}
+                    </span>
                   </div>
                   <ul className="text-gray-300 space-y-1 list-disc list-inside">
                     {school.description.map((desc, i) => (
@@ -118,16 +147,18 @@ function Resume() {
           </section>
 
           <section id="projects">
-            <h2 className="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-2">Projects</h2>
+            <h2 className="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-2">
+              Projects
+            </h2>
             <div className="space-y-6">
               {portfolioProjects.map((project, index) => (
                 <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-                    <a 
+                    <a
                       href={project.url}
                       target="_blank"
-                      rel="noopener noreferrer" 
+                      rel="noopener noreferrer"
                       className="text-blue-400 hover:text-blue-300"
                     >
                       <ExternalLink className="w-5 h-5" />
@@ -140,7 +171,10 @@ function Resume() {
                   </ul>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
-                      <span key={tech} className="px-2 py-1 bg-slate-700 text-gray-300 rounded text-xs">
+                      <span
+                        key={tech}
+                        className="px-2 py-1 bg-slate-700 text-gray-300 rounded text-xs"
+                      >
                         {tech}
                       </span>
                     ))}
@@ -151,14 +185,21 @@ function Resume() {
           </section>
 
           <section id="skills">
-            <h2 className="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-2">Technical Skills</h2>
+            <h2 className="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-2">
+              Technical Skills
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {skills.map((skillCategory, index) => (
                 <div key={index}>
-                  <h3 className="text-lg font-semibold text-purple-400 mb-3">{skillCategory.category}</h3>
+                  <h3 className="text-lg font-semibold text-purple-400 mb-3">
+                    {skillCategory.category}
+                  </h3>
                   <div className="flex flex-wrap gap-2">
                     {skillCategory.skills.map((tech) => (
-                      <span key={tech} className="px-3 py-1 bg-slate-700 text-gray-300 rounded-full text-sm">
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-slate-700 text-gray-300 rounded-full text-sm"
+                      >
                         {tech}
                       </span>
                     ))}

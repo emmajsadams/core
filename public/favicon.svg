@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Dark background circle -->
+  <circle cx="16" cy="16" r="16" fill="#1e293b"/>
+  
+  <!-- Fox ears -->
+  <path d="M10 8 L12 4 L15 9 Z" fill="#a855f7"/>
+  <path d="M22 8 L20 4 L17 9 Z" fill="#a855f7"/>
+  <path d="M11.5 7 L12.5 5.5 L13.5 7.5 Z" fill="#e879f9"/>
+  <path d="M20.5 7 L19.5 5.5 L18.5 7.5 Z" fill="#e879f9"/>
+  
+  <!-- Fox face -->
+  <circle cx="16" cy="18" r="10" fill="#f1f5f9"/>
+  
+  <!-- Fox muzzle -->
+  <ellipse cx="16" cy="22" rx="5" ry="3" fill="#e2e8f0"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="13" cy="16" rx="1.5" ry="2" fill="#1e293b"/>
+  <ellipse cx="19" cy="16" rx="1.5" ry="2" fill="#1e293b"/>
+  <circle cx="13.5" cy="15.5" r="0.5" fill="#f1f5f9"/>
+  <circle cx="19.5" cy="15.5" r="0.5" fill="#f1f5f9"/>
+  
+  <!-- Nose -->
+  <path d="M16 20 L15 21.5 L17 21.5 Z" fill="#a855f7"/>
+  
+  <!-- Mouth -->
+  <path d="M16 21.5 Q14 23 12 22.5" stroke="#a855f7" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M16 21.5 Q18 23 20 22.5" stroke="#a855f7" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Cherry blossoms -->
+  <g transform="translate(6,6)">
+    <circle cx="0" cy="0" r="1.5" fill="#e879f9"/>
+    <path d="M-1 0 L0 -1 L1 0 L0 1 Z" fill="#a855f7"/>
+  </g>
+  
+  <g transform="translate(26,10)">
+    <circle cx="0" cy="0" r="1" fill="#e879f9"/>
+    <path d="M-0.7 0 L0 -0.7 L0.7 0 L0 0.7 Z" fill="#a855f7"/>
+  </g>
+  
+  <g transform="translate(8,26)">
+    <circle cx="0" cy="0" r="1" fill="#e879f9"/>
+    <path d="M-0.7 0 L0 -0.7 L0.7 0 L0 0.7 Z" fill="#a855f7"/>
+  </g>
+</svg>

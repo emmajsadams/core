@@ -1,7 +1,7 @@
 import fs from 'node:fs'
-import { useCallback, useState } from 'react'
 import { createFileRoute, useRouter } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
+import { useCallback, useState } from 'react'
 
 const filePath = 'todos.json'
 
@@ -14,9 +14,9 @@ async function readTodos() {
           { id: 2, name: 'Buy a new phone' },
         ],
         null,
-        2,
-      ),
-    ),
+        2
+      )
+    )
   )
 }
 

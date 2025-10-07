@@ -1,5 +1,5 @@
+import { Link, Text, View } from '@react-pdf/renderer'
 import React from 'react'
-import { View, Text, Link } from '@react-pdf/renderer'
 import { styles } from '../styles'
 
 interface HeaderProps {
@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({ name, title, email, phone, socia
     <View style={styles.header}>
       <Text style={styles.name}>{name}</Text>
       <Text style={styles.title}>{title}</Text>
-      
+
       <View style={styles.contactInfo}>
         <Text style={styles.contactItem}>{email}</Text>
         <Text style={styles.contactItem}>{phone}</Text>

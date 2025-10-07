@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     paddingBottom: 25,
     lineHeight: 1.2,
   },
-  
+
   // Header styles
   header: {
     marginBottom: 8,
@@ -212,5 +212,5 @@ export const styles = StyleSheet.create({
     borderRadius: 2,
     marginTop: 4,
     marginRight: 6,
-  }
+  },
 })

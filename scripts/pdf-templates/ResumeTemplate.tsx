@@ -1,8 +1,8 @@
-import React from 'react'
 import { Document, Page } from '@react-pdf/renderer'
-import { Header } from './components/Header'
-import { Experience } from './components/Experience'
+import React from 'react'
 import { Education } from './components/Education'
+import { Experience } from './components/Experience'
+import { Header } from './components/Header'
 import { Projects } from './components/Projects'
 import { Skills } from './components/Skills'
 import { styles } from './styles'
@@ -61,13 +61,13 @@ export const ResumeTemplate: React.FC<ResumeTemplateProps> = ({ data }) => {
           phone={data.personalInfo.phone}
           socialLinks={data.socialLinks}
         />
-        
+
         <Experience experiences={data.experience} />
-        
+
         <Education education={data.education} />
-        
+
         <Projects projects={data.projects} />
-        
+
         <Skills skills={data.skills} />
       </Page>
     </Document>

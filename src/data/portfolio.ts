@@ -1,6 +1,15 @@
 // Import the actual config data
-import { NAME, EMAIL, TITLE, PHONE_NUMBER, GITHUB, LINKEDIN, TWITTER } from '../../config/personalDetails'
+
 import experiences from '../../config/experiences'
+import {
+  EMAIL,
+  GITHUB,
+  LINKEDIN,
+  NAME,
+  PHONE_NUMBER,
+  TITLE,
+  TWITTER,
+} from '../../config/personalDetails'
 import projects from '../../config/projects'
 import schools from '../../config/schools'
 import technologies from '../../config/skills'
@@ -20,20 +29,20 @@ export const personalInfo = {
 
 export const socialLinks: SocialLink[] = [
   {
-    name: "GitHub",
+    name: 'GitHub',
     url: `https://${GITHUB}`,
-    icon: "Github"
+    icon: 'Github',
   },
   {
-    name: "LinkedIn", 
+    name: 'LinkedIn',
     url: `https://${LINKEDIN}`,
-    icon: "Linkedin"
+    icon: 'Linkedin',
   },
   {
-    name: "Twitter",
-    url: `https://${TWITTER}`, 
-    icon: "Twitter"
-  }
+    name: 'Twitter',
+    url: `https://${TWITTER}`,
+    icon: 'Twitter',
+  },
 ]
 
 export const education = schools

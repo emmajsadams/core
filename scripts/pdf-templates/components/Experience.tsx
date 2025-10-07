@@ -1,5 +1,5 @@
+import { Text, View } from '@react-pdf/renderer'
 import React from 'react'
-import { View, Text } from '@react-pdf/renderer'
 import { styles } from '../styles'
 
 interface ExperienceItem {
@@ -19,7 +19,7 @@ export const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
   return (
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>EXPERIENCE</Text>
-      
+
       {experiences.map((exp, index) => (
         <View key={index} style={styles.experienceItem}>
           <View style={styles.jobHeader}>
@@ -28,9 +28,11 @@ export const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
               <Text style={styles.company}>{exp.institution}</Text>
               <Text style={styles.location}>{exp.location}</Text>
             </View>
-            <Text style={styles.dateRange}>{exp.start} - {exp.end}</Text>
+            <Text style={styles.dateRange}>
+              {exp.start} - {exp.end}
+            </Text>
           </View>
-          
+
           <View style={styles.descriptionList}>
             {exp.description.map((desc, i) => (
               <View key={i} style={styles.row}>
