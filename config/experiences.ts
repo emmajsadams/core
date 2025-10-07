@@ -10,6 +10,7 @@ export interface Experience {
   description: string[]
 }
 
+// Revised: Oct 6, 2025
 export const Supio: Experience = {
   title: 'Lead Senior Software Engineer',
   institution: 'Supio',
@@ -27,6 +28,7 @@ export const Supio: Experience = {
   ],
 }
 
+// Revised: Oct 6, 2025
 export const HPE: Experience = {
   title: 'Senior Software Engineer',
   institution: 'Hewlett Packard Enterprise',
@@ -43,6 +45,7 @@ export const HPE: Experience = {
   ],
 }
 
+// Revised: Oct 6, 2025
 export const DevotedHealth: Experience = {
   title: 'Principal Software Engineer',
   institution: 'Devoted Health',

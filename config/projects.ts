@@ -105,5 +105,5 @@ export const TypeScriptDatabase: Project = {
   description: ['A transactional in-memory database for TypeScript with a string key/value REPL.'],
 }
 
-// TODO: Consider FlightSearcher, Checkout?
-export default [Minerva, TypeScriptDatabase, Grimoire, DiscordManagementBot, Dstruct]
+// TODO: Consider FlightSearcher, Checkout, DiscordManagementBot
+export default [Minerva, TypeScriptDatabase, Grimoire, Dstruct]
