@@ -25,8 +25,8 @@ export const Minerva: Project = {
   url: `${PROJECT_URL}/minerva`,
   technologies: ['TypeScript', 'React', 'Next.JS', 'TailwindCSS', 'Convex', 'Bun', 'Vercel'],
   description: [
-    'Personal productivity application inspired by Persona 3 Reload\'s "Sea of Souls" aesthetic, blending task management with introspective design.',
-    'Features real-time task synchronization via Convex, rich markdown notes, and AI-powered productivity tools in a serene aquatic-themed interface.',
+    'Personal productivity application blending task management with introspective design and a serene aquatic aesthetic.',
+    'Features real-time task synchronization via Convex, rich markdown notes, and AI-powered productivity tools in a thoughtfully crafted interface.',
     'Emphasizes personal growth through glass morphism effects, fluid animations, and thoughtful typography that transforms productivity into a meditative experience.',
   ],
 }
