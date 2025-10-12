@@ -1,312 +1,104 @@
-Welcome to your new TanStack app! 
+# Emma Adams - Portfolio & Resume Site
 
-TODO:
-* Figure out how to disable tanstack 
+A modern portfolio and resume website built with React, TanStack Start, and TailwindCSS. Features automated PDF resume generation and deployment to Vercel.
 
-# Getting Started
+## TODO
 
-To run this application:
+- [ ] Fix TanStack dev tools configuration
 
-```bash
-npm install
-npm run start
-```
+## Overview
 
-# Building For Production
+This is a personal portfolio site that showcases:
+- Professional experience and work history
+- Technical skills and expertise
+- Project portfolio
+- Educational background
+- Auto-generated PDF resume
 
-To build this application for production:
+## Tech Stack
 
-```bash
-npm run build
-```
+- **Framework:** React with TanStack Start
+- **Styling:** TailwindCSS 4.x
+- **PDF Generation:** @react-pdf/renderer
+- **Deployment:** Vercel
+- **Package Manager:** pnpm
+- **Code Quality:** Biome (formatting & linting)
 
-# Deployment
+## Key Commands
 
-This application is configured for Cloudflare Workers deployment following the [TanStack Start Cloudflare hosting guide](https://tanstack.com/start/latest/docs/framework/react/hosting).
-
-To deploy to Cloudflare Workers:
-
-```bash
-pnpm run build && pnpm run deploy
-```
-
-The deployment process:
-1. `pnpm run build` - Builds the application for production
-2. `pnpm run deploy` - Deploys to Cloudflare Workers using wrangler
-
-Make sure you have:
-- Wrangler CLI installed and authenticated with your Cloudflare account
-- Custom domain configured in `wrangler.jsonc` if using a custom domain
-- Proper environment variables and secrets configured in Cloudflare dashboard if needed
-
-## Testing
-
-This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
+### Development
 
 ```bash
-npm run test
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm run dev
+
+# Run tests
+pnpm run test
+
+# Format and lint code
+pnpm run check
+pnpm run format
 ```
 
-## Styling
-
-This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
-
-
-
-
-## Routing
-This project uses [TanStack Router](https://tanstack.com/router). The initial setup is a file based router. Which means that the routes are managed as files in `src/routes`.
-
-### Adding A Route
-
-To add a new route to your application just add another a new file in the `./src/routes` directory.
-
-TanStack will automatically generate the content of the route file for you.
-
-Now that you have two routes you can use a `Link` component to navigate between them.
-
-### Adding Links
-
-To use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
-
-```tsx
-import { Link } from "@tanstack/react-router";
-```
-
-Then anywhere in your JSX you can use it like so:
-
-```tsx
-<Link to="/about">About</Link>
-```
-
-This will create a link that will navigate to the `/about` route.
-
-More information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
-
-### Using A Layout
-
-In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you use the `<Outlet />` component.
-
-Here is an example layout that includes a header:
-
-```tsx
-import { Outlet, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
-
-import { Link } from "@tanstack/react-router";
-
-export const Route = createRootRoute({
-  component: () => (
-    <>
-      <header>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-        </nav>
-      </header>
-      <Outlet />
-      <TanStackRouterDevtools />
-    </>
-  ),
-})
-```
-
-The `<TanStackRouterDevtools />` component is not required so you can remove it if you don't want it in your layout.
-
-More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
-
-
-## Data Fetching
-
-There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
-
-For example:
-
-```tsx
-const peopleRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/people",
-  loader: async () => {
-    const response = await fetch("https://swapi.dev/api/people");
-    return response.json() as Promise<{
-      results: {
-        name: string;
-      }[];
-    }>;
-  },
-  component: () => {
-    const data = peopleRoute.useLoaderData();
-    return (
-      <ul>
-        {data.results.map((person) => (
-          <li key={person.name}>{person.name}</li>
-        ))}
-      </ul>
-    );
-  },
-});
-```
-
-Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
-
-### React-Query
-
-React-Query is an excellent addition or alternative to route loading and integrating it into you application is a breeze.
-
-First add your dependencies:
+### PDF Resume Generation
 
 ```bash
-npm install @tanstack/react-query @tanstack/react-query-devtools
+# Generate PDF resume from config
+pnpm run generate-pdf
 ```
 
-Next we'll need to create a query client and provider. We recommend putting those in `main.tsx`.
+This reads from `config/` files and generates `public/EmmaAdams_Resume.pdf`
 
-```tsx
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-// ...
-
-const queryClient = new QueryClient();
-
-// ...
-
-if (!rootElement.innerHTML) {
-  const root = ReactDOM.createRoot(rootElement);
-
-  root.render(
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
-  );
-}
-```
-
-You can also add TanStack Query Devtools to the root route (optional).
-
-```tsx
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-
-const rootRoute = createRootRoute({
-  component: () => (
-    <>
-      <Outlet />
-      <ReactQueryDevtools buttonPosition="top-right" />
-      <TanStackRouterDevtools />
-    </>
-  ),
-});
-```
-
-Now you can use `useQuery` to fetch your data.
-
-```tsx
-import { useQuery } from "@tanstack/react-query";
-
-import "./App.css";
-
-function App() {
-  const { data } = useQuery({
-    queryKey: ["people"],
-    queryFn: () =>
-      fetch("https://swapi.dev/api/people")
-        .then((res) => res.json())
-        .then((data) => data.results as { name: string }[]),
-    initialData: [],
-  });
-
-  return (
-    <div>
-      <ul>
-        {data.map((person) => (
-          <li key={person.name}>{person.name}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-export default App;
-```
-
-You can find out everything you need to know on how to use React-Query in the [React-Query documentation](https://tanstack.com/query/latest/docs/framework/react/overview).
-
-## State Management
-
-Another common requirement for React applications is state management. There are many options for state management in React. TanStack Store provides a great starting point for your project.
-
-First you need to add TanStack Store as a dependency:
+### Production Build & Deploy
 
 ```bash
-npm install @tanstack/store
+# Build for production
+pnpm run build
+
+# Deploy to Vercel (automatically runs on git push to main)
+vercel --prod
 ```
 
-Now let's create a simple counter in the `src/App.tsx` file as a demonstration.
+## Project Structure
 
-```tsx
-import { useStore } from "@tanstack/react-store";
-import { Store } from "@tanstack/store";
-import "./App.css";
-
-const countStore = new Store(0);
-
-function App() {
-  const count = useStore(countStore);
-  return (
-    <div>
-      <button onClick={() => countStore.setState((n) => n + 1)}>
-        Increment - {count}
-      </button>
-    </div>
-  );
-}
-
-export default App;
+```
+├── config/                # Resume data configuration
+│   ├── experiences.ts     # Work experience
+│   ├── education.ts       # Educational background
+│   ├── projects.ts        # Portfolio projects
+│   ├── skills.ts          # Technical skills
+│   └── personalDetails.ts # Contact info and personal details
+├── scripts/               # Build and generation scripts
+│   ├── generate-pdf.ts    # PDF resume generator
+│   └── pdf-templates/     # React PDF components
+├── app/                   # Application source
+│   ├── routes/            # TanStack file-based routes
+│   └── components/        # React components
+└── public/                # Static assets
 ```
 
-One of the many nice features of TanStack Store is the ability to derive state from other state. That derived state will update when the base state updates.
+## Configuration
 
-Let's check this out by doubling the count using derived state.
+All resume data is centralized in `config/` TypeScript files. Update these files to modify:
+- Work experience and descriptions
+- Technical skills and categories
+- Project details
+- Contact information
 
-```tsx
-import { useStore } from "@tanstack/react-store";
-import { Store, Derived } from "@tanstack/store";
-import "./App.css";
+Changes are automatically reflected on the website and in the generated PDF resume.
 
-const countStore = new Store(0);
+## Deployment
 
-const doubledStore = new Derived({
-  fn: () => countStore.state * 2,
-  deps: [countStore],
-});
-doubledStore.mount();
+The site is deployed to Vercel with automatic deployments on push to `main`. The deployment includes:
+1. Production build of the React application
+2. PDF resume generation
+3. Static asset optimization
 
-function App() {
-  const count = useStore(countStore);
-  const doubledCount = useStore(doubledStore);
+Custom domain: `emma.adams.engineer`
 
-  return (
-    <div>
-      <button onClick={() => countStore.setState((n) => n + 1)}>
-        Increment - {count}
-      </button>
-      <div>Doubled - {doubledCount}</div>
-    </div>
-  );
-}
+## Pre-commit Hooks
 
-export default App;
-```
-
-We use the `Derived` class to create a new store that is derived from another store. The `Derived` class has a `mount` method that will start the derived store updating.
-
-Once we've created the derived store we can use it in the `App` component just like we would any other store using the `useStore` hook.
-
-You can find out everything you need to know on how to use TanStack Store in the [TanStack Store documentation](https://tanstack.com/store/latest).
-
-# Demo files
-
-Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with the features you've installed.
-
-# Learn More
-
-You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
+Biome formatting runs automatically on staged files via Git hooks to ensure code quality.
