@@ -11,19 +11,18 @@ export const ProgrammingLanguages: SkillCategory = {
 export const WebDevelopment: SkillCategory = {
   category: 'Web Development',
   skills: [
-    'HTML',
-    'CSS',
     'React',
-    'Next.js',
     'TailwindCSS',
+    'PostCSS',
+    'Next.js',
     'TanStack',
     'shadcn',
-    'PostCSS',
+    'Node.js',
+    'FastAPI',
     'ASP.NET MVC',
     'Flask',
-    'FastAPI',
     'Bun',
-    'Node.js',
+    'HTML/CSS',
   ],
 }
 
@@ -40,7 +39,6 @@ export const DataAndAI: SkillCategory = {
     'NumPy',
     'jupyter',
     'PyTorch',
-    'Elasticsearch',
   ],
 }
 
@@ -55,13 +53,21 @@ export const CloudAndDevOps: SkillCategory = {
     'Vercel',
     'Docker',
     'Kubernetes',
-    'cmake',
   ],
 }
 
 export const Databases: SkillCategory = {
   category: 'Databases',
-  skills: ['PostgreSQL', 'MySQL', 'MSSQL', 'Convex'],
+  skills: [
+    'PostgreSQL',
+    'MySQL',
+    'MSSQL',
+    'DynamoDB',
+    'Amazon RDS',
+    'Elasticsearch',
+    'Redis',
+    'Convex',
+  ],
 }
 
 export const DeveloperExperience: SkillCategory = {
@@ -73,22 +79,21 @@ export const DeveloperExperience: SkillCategory = {
     'Cursor',
     'Git',
     'Linux',
-    'npm',
-    'pnpm',
-    'vite',
-    'webpack',
-    'ESLint',
-    'Prettier',
+    'npm/pnpm',
+    'webpack/vite',
+    'ESLint/Prettier/Biome',
+    'pip/uv',
   ],
 }
 
 export const SoftSkills: SkillCategory = {
-  category: 'Soft Skills',
+  category: 'Leadership & Collaboration',
   skills: [
-    'Effective and concise communication',
-    'Constructive feedback',
-    'Continuous learning and growth',
-    'Problem solving with minimal guidance',
+    'Technical architecture and system design leadership',
+    'Engineering team mentorship and career development',
+    'Cross-functional collaboration with product and design',
+    'Establishing engineering standards and best practices',
+    'Strategic technical planning and execution',
   ],
 }
 

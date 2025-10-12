@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
   name: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 4,
+    marginBottom: 12,
     color: '#1f2937',
   },
   title: {
@@ -161,34 +161,22 @@ export const styles = StyleSheet.create({
   },
 
   // Skills styles
-  skillsGrid: {
+  skillRow: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 8,
+    marginBottom: 3,
   },
-  skillCategory: {
-    width: '48%',
-    marginBottom: 5,
-  },
-  skillCategoryTitle: {
+  skillCategoryLabel: {
     fontSize: 9,
     fontWeight: 'bold',
     color: '#1f2937',
-    marginBottom: 2,
+    marginRight: 5,
+    minWidth: 80,
   },
-  skillsList: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 2,
-  },
-  skillItem: {
-    fontSize: 7,
+  skillsText: {
+    fontSize: 8,
     color: '#374151',
-    backgroundColor: '#f9fafb',
-    paddingHorizontal: 3,
-    paddingVertical: 1,
-    borderRadius: 2,
-    marginBottom: 1,
+    flex: 1,
+    lineHeight: 1.3,
   },
 
   // Utility styles

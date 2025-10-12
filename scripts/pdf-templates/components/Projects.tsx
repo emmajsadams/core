@@ -27,14 +27,6 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
               <Text style={styles.projectDescription}>{desc}</Text>
             </View>
           ))}
-
-          <View style={styles.technologies}>
-            {project.technologies.map((tech, i) => (
-              <Text key={i} style={styles.techTag}>
-                {tech}
-              </Text>
-            ))}
-          </View>
         </View>
       ))}
     </View>

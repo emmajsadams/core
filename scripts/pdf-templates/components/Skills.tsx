@@ -16,20 +16,12 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>TECHNICAL SKILLS</Text>
 
-      <View style={styles.skillsGrid}>
-        {skills.map((skillCategory, index) => (
-          <View key={index} style={styles.skillCategory}>
-            <Text style={styles.skillCategoryTitle}>{skillCategory.category}</Text>
-            <View style={styles.skillsList}>
-              {skillCategory.skills.map((skill, i) => (
-                <Text key={i} style={styles.skillItem}>
-                  {skill}
-                </Text>
-              ))}
-            </View>
-          </View>
-        ))}
-      </View>
+      {skills.map((skillCategory, index) => (
+        <View key={index} style={styles.skillRow}>
+          <Text style={styles.skillCategoryLabel}>{skillCategory.category}:</Text>
+          <Text style={styles.skillsText}>{skillCategory.skills.join(', ')}</Text>
+        </View>
+      ))}
     </View>
   )
 }
