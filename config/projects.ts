@@ -9,81 +9,14 @@ export interface Project {
   description: string[]
 }
 
-export const Grimoire: Project = {
-  title: 'Grimoire',
-  url: `${PROJECT_URL}/grimoire`,
-  technologies: [
-    'TypeScript',
-    'Next.JS',
-    'Docker',
-    'React',
-    'GraphQL (Apollo)',
-    'Postgres (Prisma)',
-    'Material UI',
-    'Css (Emotion)',
-  ],
-  description: [
-    'Next.JS powered notes and calendar app with a Material UI composed of small reusable components.',
-    'GraphQL backend with access control for separate users that uses Prisma to persist data with Postgres.',
-  ],
-}
-
-export const NoteDoctor: Project = {
-  title: 'Note Doctor',
-  url: `${PROJECT_URL}/note-doctor`,
-  technologies: ['TypeScript', 'Node.JS', 'SendGrid', 'Google Cloud', 'eslint', 'prettier'],
-  description: [
-    'A CLI tool for triaging markdown files using front-matter headers sorted by priority, status, category, and due date.',
-    'Sends a daily email digest of due and urgent tasks using the SendGrid Email API and Google Cloud VMs.',
-  ],
-}
-
-export const DiscordManagementBot: Project = {
-  title: 'Discord Management Bot',
-  url: `${PROJECT_URL}/discord-mgmt-bot`,
-  technologies: ['TypeScript', 'Node.JS', 'Docker', 'Discord.js', 'eslint', 'prettier'],
-  description: [
-    'Discord bots written in TypeScript running on Node.JS for logging, music, GPT-2 chatting, role management, and security monitoring.',
-    'Scales to a discord of any size and can be configured with JSON to support any number of discords.',
-    'Code is broken up into highly reusable modules that can be pulled into any TypeScript project for customization.',
-  ],
-}
-
 export const Dstruct: Project = {
   title: 'dstruct',
   url: `${PROJECT_URL}/dstruct`,
   technologies: ['TypeScript', 'Grunt', 'Docker', 'Bower', 'Karma'],
   description: [
-    'Common data structures and algorithms for TypeScript.',
-    'Based on Java collections, C# collections, and Google Java collections.',
-  ],
-}
-
-export const GPT2API: Project = {
-  title: 'GPT-2 API',
-  url: `${PROJECT_URL}/gpt2-api`,
-  technologies: ['Python', 'Starlette', 'GPT-2', 'Tensorflow', 'Docker', 'Kubernetes'],
-  description: [
-    'An API that allows requests against GPT-2 models to generate meaningful responses to any text prompt.',
-  ],
-}
-
-export const ShareTube: Project = {
-  title: 'ShareTube',
-  url: `${PROJECT_URL}/sharetube`,
-  technologies: ['TypeScript', 'Node.JS', 'Docker', 'React', 'eslint', 'prettier'],
-  description: [
-    'Displays a video with multiple sources allowing the user to select which source is used.',
-    'Implements a single shared comments thread across all sources for the video.',
-  ],
-}
-
-export const AutocompleteComparison: Project = {
-  title: 'Autocomplete Comparison',
-  url: `${PROJECT_URL}/autocomplete-compare-web`,
-  technologies: ['TypeScript', 'React', 'Redux', 'React Native', 'C#', 'Blazor'],
-  description: [
-    'An implementation of the same search autocomplete similar to Google in React Native, React, and C# Blazor.',
+    'A comprehensive data structures library for TypeScript, created as a learning exercise and exploration of algorithmic design.',
+    'Implements 15+ structures including Red-Black trees, hash/tree maps, bimaps, multisets, and more - inspired by Java Collections, C# Collections, and Google Guava.',
+    'Features type-safe implementations with ES6 Map support, demonstrating foundational CS concepts in modern TypeScript.',
   ],
 }
 
@@ -92,9 +25,9 @@ export const Minerva: Project = {
   url: `${PROJECT_URL}/minerva`,
   technologies: ['TypeScript', 'React', 'Next.JS', 'TailwindCSS', 'Convex', 'Bun', 'Vercel'],
   description: [
-    'Personal productivity application featuring task management, note storage, and AI integration.',
-    'Real-time data synchronization with Convex backend and sortable task management with rich markdown descriptions.',
-    'Features oceanic design with glass morphism effects and fluid animations.',
+    'Personal productivity application inspired by Persona 3 Reload\'s "Sea of Souls" aesthetic, blending task management with introspective design.',
+    'Features real-time task synchronization via Convex, rich markdown notes, and AI-powered productivity tools in a serene aquatic-themed interface.',
+    'Emphasizes personal growth through glass morphism effects, fluid animations, and thoughtful typography that transforms productivity into a meditative experience.',
   ],
 }
 
@@ -102,8 +35,29 @@ export const TypeScriptDatabase: Project = {
   title: 'TypeScript Database',
   url: `${PROJECT_URL}/ts-database`,
   technologies: ['TypeScript', 'Node.JS', 'eslint', 'prettier', 'mocha', 'sinon'],
-  description: ['A transactional in-memory database for TypeScript with a string key/value REPL.'],
+  description: [
+    'A transactional in-memory database for TypeScript featuring a full REPL interface for interactive key-value operations.',
+    'Supports nested transactions with BEGIN/ROLLBACK/COMMIT, enabling complex data manipulation with type safety and clean architectural separation.',
+    'Built with extensibility in mind - modular command parsing and pluggable storage backends for different key-value type systems.',
+  ],
 }
 
-// TODO: Consider FlightSearcher, Checkout, DiscordManagementBot
-export default [Minerva, TypeScriptDatabase, Grimoire, Dstruct]
+export const Wright: Project = {
+  title: 'Wright – Agentic Context Engineering CLI',
+  url: `${PROJECT_URL}/wright`,
+  technologies: [
+    'TypeScript',
+    'Node.js',
+    'OpenAI API',
+    'CLI (Commander.js / Inquirer)',
+    'Zod',
+    'esbuild / tsup / TSC',
+  ],
+  description: [
+    'A TypeScript CLI implementing Agentic Context Engineering (ACE) with ReAct (Reasoning + Acting) methodology for self-improving AI context systems.',
+    'Features a three-agent pipeline: ReActGeneratorAgent performs tool-enabled reasoning, ReflectorAgent extracts insights, and CuratorAgent updates evolving knowledge bases.',
+    'Prevents context collapse through structured bullet accumulation and always-on ReAct reasoning, creating versioned knowledge that improves over time.',
+  ],
+}
+
+export default [Wright, Minerva, TypeScriptDatabase, Dstruct]
