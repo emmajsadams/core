@@ -76,7 +76,6 @@ export const DeveloperExperience: SkillCategory = {
     'Claude Code',
     'Cursor',
     'VSCode',
-    'Cursor',
     'Git',
     'Linux',
     'npm/pnpm',
