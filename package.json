@@ -11,13 +11,15 @@
     "deploy:prod": "NODE_ENV=production pnpm run build && pnpm run generate-pdf && pnpm run deploy",
     "cf-typegen": "wrangler types",
     "generate-pdf": "tsx scripts/generate-pdf.ts",
-    "format": "biome format --write .",
-    "format:check": "biome format .",
+    "validate-punctuation": "tsx config/validate-punctuation.ts",
+    "format:fix": "biome format --write .",
+    "format": "biome format .",
     "lint": "biome lint .",
     "lint:fix": "biome lint --write .",
-    "check": "biome check .",
-    "check:fix": "biome check --write .",
-    "favicon": "node scripts/convert-favicon.js"
+    "check": "biome check . && pnpm run validate-punctuation",
+    "check:fix": "biome check --write . && pnpm run validate-punctuation",
+    "favicon": "node scripts/convert-favicon.js",
+    "prepare": "husky"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.6",
@@ -44,6 +46,7 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^5.0.4",
+    "husky": "^9.1.7",
     "jsdom": "^27.0.0",
     "tsx": "^4.20.6",
     "typescript": "^5.7.2",
