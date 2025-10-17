@@ -22,7 +22,7 @@ export const Supio: Experience = {
     'Built and deployed agentic AI systems in Python (smolagents, LangChain) for autonomous legal drafting, including expert disclosure, demand letters, and medical summary generation, reducing drafting time from hours to minutes.',
     'Collaborated with product and design teams to build real-time collaborative editing interface with integrated AI chat for contextual document verification and natural-language revisions, improving attorney workflow efficiency.',
     'Established organizational standards for AI-assisted development using Claude Code and GitHub Copilot, defining security protocols, code review practices, and quality gates for LLM-generated code.',
-    'Mentor team on modern AI/ML techniques, prompt engineering best practices, and agentic system design patterns while maintaining hands-on contribution to critical path features.',
+    'Mentor team on modern AI techniques, context engineering best practices, and agentic system design patterns while maintaining hands-on contribution to critical path features.',
   ],
 }
 
@@ -52,11 +52,11 @@ export const DevotedHealth: Experience = {
   start: 'Feb. 2021',
   end: 'Apr. 2023',
   description: [
-    "Led architectural redesign of risk adjustment engine (the company's primary revenue stream processing $100M+ in annual CMS claim reimbursements), improving accuracy by 25% and reducing processing time from days to hours.",
-    'Partnered with clinical operations and product teams to architect and deliver HIPAA-compliant medical coding annotation platform from conception to production, enabling clinical teams to process 50K+ medical records monthly with real-time collaboration and audit trails.',
-    'Optimized critical ETL pipelines processing 10M+ healthcare claims, reducing processing time by 60% and infrastructure costs by 40% through strategic data partitioning and parallel processing architecture.',
+    "Led architectural redesign of risk adjustment engine (the company's primary revenue stream), improving accuracy and reducing processing time.",
+    'Partnered with clinical operations and product teams to architect and deliver HIPAA-compliant medical coding annotation platform.',
+    'Optimized critical ETL pipelines, reducing processing time and infrastructure costs through strategic data partitioning and parallel processing architecture.',
     'Drove technical strategy as Principal Engineer, leading architecture reviews, establishing design patterns for Go microservices and React applications, and mentoring engineers on healthcare domain expertise and compliance requirements.',
-    'Collaborated with product, clinical operations, and regulatory teams to translate complex healthcare regulatory requirements into technical specifications, shipping 5 major product features that directly enabled business growth from 10K to 50K members.',
+    'Collaborated with product, clinical operations, and regulatory teams to translate complex healthcare regulatory requirements into technical specifications.',
   ],
 }
 
@@ -68,11 +68,11 @@ export const HumbleBundleLead: Experience = {
   start: 'Jul. 2018',
   end: 'Jul. 2020',
   description: [
-    'Promoted to Lead Senior Software Engineer II, managing team of 5 engineers and partnering with product and business development teams on Platform team supporting high-traffic e-commerce platform serving 26M monthly page views and processing millions in transactions.',
+    'Promoted to Lead Senior Software Engineer II, managing team of 5 engineers and partnering with product and business development teams on Platform team supporting high-traffic e-commerce platform serving 15M monthly page views and processing millions in transactions.',
     'Led cross-functional company-wide internationalization initiative for 8-year-old monolithic Python/React application, coordinating with product, design, and content teams to architect localization system adopted across all product teams and expanding market reach to 15+ countries.',
-    'Partnered with security and product teams to architect and execute critical security migration to TOTP two-factor authentication and OAuth Google login for entire user base (5M+ accounts), achieving zero-downtime deployment with comprehensive rollback strategy.',
+    'Partnered with security and product teams to architect and execute critical security migration to TOTP two-factor authentication and OAuth Google login for entire user base (12M+ accounts), achieving zero-downtime deployment with comprehensive rollback strategy.',
     'Built and shipped core e-commerce features in Python Django and React handling payment processing, inventory management, and promotional campaigns for high-profile game and book bundles.',
-    'Developed engineering talent through hands-on mentorship including weekly 1-on-1s, code review standards, pair programming sessions, and career development planning, resulting in 2 promotions within team.',
+    'Developed engineering talent through hands-on mentorship including weekly 1-on-1s, code review standards, pair programming sessions, and career development planning.',
   ],
 }
 
