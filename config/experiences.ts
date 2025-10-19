@@ -17,12 +17,12 @@ export const Supio: Experience = {
   start: 'Feb. 2025',
   end: 'Present',
   description: [
-    'Lead engineering team of 5 and partner with product, design, and legal subject matter experts to deliver AI-powered legal document automation adopted by 20+ law firms within first quarter, driving technical architecture decisions through full product lifecycle.',
-    'Architected production LLM orchestration system in TypeScript integrating Claude and OpenAI APIs, implementing advanced prompt engineering, context management, and RAG pipelines for rapid deployment of legal document blueprints.',
+    'Lead engineering team of 5 and partnered with product, design, and legal subject matter experts to deliver AI-powered legal document automation adopted by 50+ law firms within first quarter, driving technical architecture decisions through full product lifecycle.',
+    'Architected production LLM orchestration system in TypeScript integrating Claude and OpenAI APIs, implementing context engineering best practices, and RAG pipelines for rapid deployment of legal document blueprints.',
     'Built and deployed agentic AI systems in Python (smolagents, LangChain) for autonomous legal drafting, including expert disclosure, demand letters, and medical summary generation, reducing drafting time from hours to minutes.',
     'Collaborated with product and design teams to build real-time collaborative editing interface with integrated AI chat for contextual document verification and natural-language revisions, improving attorney workflow efficiency.',
-    'Established organizational standards for AI-assisted development using Claude Code and GitHub Copilot, defining security protocols, code review practices, and quality gates for LLM-generated code.',
-    'Mentor team on modern AI techniques, context engineering best practices, and agentic system design patterns while maintaining hands-on contribution to critical path features.',
+    'Established organizational engineering standards for CI/CD automation, testing frameworks, REST/GraphQL API design patterns, and PostgreSQL database architecture, integrating agentic coding tools like Claude Code while implementing code review practices and quality gates adopted across development team.',
+    'Mentor junior engineers on software engineering best practices, architectural design patterns, and code quality standards while maintaining hands-on contribution to critical path features.',
   ],
 }
 
@@ -36,9 +36,9 @@ export const HPE: Experience = {
   end: 'Nov. 2024',
   description: [
     'Partnered with product managers and data science teams to architect and build production RAG evaluation platform from ground up using Go microservices, Python ML pipelines, React frontend, and distributed systems (Kubernetes, RabbitMQ, Postgres, Milvus vector DB) supporting enterprise-scale LLM validation workflows.',
-    'Designed and implemented real-time WebSocket streaming system for live visualization of DeepEval metrics (groundedness, context relevancy, answer relevancy) during model validation, enabling data scientists to iterate on RAG configurations 10x faster.',
+    'Designed and implemented real-time WebSocket streaming system for live visualization of DeepEval metrics (groundedness, context relevancy, answer relevancy) during model validation, enabling customers to iterate on RAG configurations faster.',
     'Established comprehensive frontend architecture and engineering standards for React applications, implementing type-safe API contracts (Orval, Zod), component testing strategies (Storybook, Jest, Playwright), and API mocking (MSW) adopted across 3 product teams.',
-    'Collaborated with AI research teams to optimize JupyterLab extension for managing enterprise LLM training pipelines, reducing memory footprint by 40% and improving UI responsiveness for data-intensive operations on multi-GPU clusters.',
+    'Collaborated with AI research teams to optimize JupyterLab extension for managing enterprise LLM training pipelines, reducing memory footprint and improving UI responsiveness for data-intensive operations on multi-GPU clusters.',
     'Led technical design and architecture decisions through cross-functional collaboration with product, design, and AI research teams, producing detailed design documents and delivering stakeholder presentations that aligned engineering execution with product strategy.',
   ],
 }
@@ -71,7 +71,7 @@ export const HumbleBundleLead: Experience = {
     'Promoted to Lead Senior Software Engineer II, managing team of 5 engineers and partnering with product and business development teams on Platform team supporting high-traffic e-commerce platform serving 15M monthly page views and processing millions in transactions.',
     'Led cross-functional company-wide internationalization initiative for 8-year-old monolithic Python/React application, coordinating with product, design, and content teams to architect localization system adopted across all product teams and expanding market reach to 15+ countries.',
     'Partnered with security and product teams to architect and execute critical security migration to TOTP two-factor authentication and OAuth Google login for entire user base (12M+ accounts), achieving zero-downtime deployment with comprehensive rollback strategy.',
-    'Built and shipped core e-commerce features in Python Django and React handling payment processing, inventory management, and promotional campaigns for high-profile game and book bundles.',
+    'Built and shipped core e-commerce features in Python Flask and React handling payment processing, inventory management, and promotional campaigns for high-profile game and book bundles.',
     'Developed engineering talent through hands-on mentorship including weekly 1-on-1s, code review standards, pair programming sessions, and career development planning.',
   ],
 }
