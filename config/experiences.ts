@@ -45,7 +45,7 @@ export const HPE: Experience = {
 
 // Revised: Oct 6, 2025
 export const DevotedHealth: Experience = {
-  title: 'Lead Software Engineer',
+  title: 'Staff Software Engineer',
   institution: 'Devoted Health',
   institutionUrl: 'https://www.devoted.com/',
   location: 'Remote',
