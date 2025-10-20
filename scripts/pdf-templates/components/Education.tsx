@@ -23,11 +23,10 @@ export const Education: React.FC<EducationProps> = ({ education }) => {
 
       {education.map((edu, index) => (
         <View key={index} style={styles.educationItem}>
-          <Text style={styles.degree}>{edu.degree}</Text>
-          <Text style={styles.school}>{edu.institution}</Text>
-
-          <View style={styles.educationDetails}>
-            <Text style={styles.gpa}>GPA: {edu.gpa}</Text>
+          <View style={styles.educationHeader}>
+            <Text style={styles.degree}>
+              {edu.degree} - {edu.institution}
+            </Text>
             <Text style={styles.graduationYear}>
               {edu.startYear} - {edu.endYear}
             </Text>

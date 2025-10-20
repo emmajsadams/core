@@ -13,13 +13,13 @@ export const styles = StyleSheet.create({
 
   // Header styles
   header: {
-    marginBottom: 8,
+    marginBottom: 6,
     textAlign: 'center',
   },
   name: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 12,
+    marginBottom: 10,
     color: '#1f2937',
   },
   title: {
@@ -106,6 +106,12 @@ export const styles = StyleSheet.create({
   educationItem: {
     marginBottom: 6,
   },
+  educationHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    marginBottom: 2,
+  },
   degree: {
     fontSize: 10,
     fontWeight: 'bold',
@@ -136,8 +142,9 @@ export const styles = StyleSheet.create({
   projectTitle: {
     fontSize: 10,
     fontWeight: 'bold',
-    color: '#1f2937',
+    color: '#2563eb',
     marginBottom: 1,
+    textDecoration: 'underline',
   },
   projectDescription: {
     fontSize: 8,

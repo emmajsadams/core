@@ -23,11 +23,9 @@ export const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
       {experiences.map((exp, index) => (
         <View key={index} style={styles.experienceItem}>
           <View style={styles.jobHeader}>
-            <View>
-              <Text style={styles.jobTitle}>{exp.title}</Text>
-              <Text style={styles.company}>{exp.institution}</Text>
-              <Text style={styles.location}>{exp.location}</Text>
-            </View>
+            <Text style={styles.jobTitle}>
+              {exp.title} - {exp.institution}
+            </Text>
             <Text style={styles.dateRange}>
               {exp.start} - {exp.end}
             </Text>

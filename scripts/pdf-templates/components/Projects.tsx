@@ -1,9 +1,10 @@
-import { Text, View } from '@react-pdf/renderer'
+import { Link, Text, View } from '@react-pdf/renderer'
 import React from 'react'
 import { styles } from '../styles'
 
 interface ProjectItem {
   title: string
+  url: string
   technologies: string[]
   description: string[]
 }
@@ -19,7 +20,9 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
 
       {projects.map((project, index) => (
         <View key={index} style={styles.projectItem}>
-          <Text style={styles.projectTitle}>{project.title}</Text>
+          <Link src={project.url} style={styles.projectTitle}>
+            {project.title}
+          </Link>
 
           {project.description.map((desc, i) => (
             <View key={i} style={styles.row}>
