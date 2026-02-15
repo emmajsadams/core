@@ -29,11 +29,11 @@ function Resume() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950">
       <div className="max-w-4xl mx-auto px-6 py-12">
         <header className="text-center mb-12">
           <h1 className="text-5xl font-bold text-white mb-2">{personalInfo.name}</h1>
-          <p className="text-xl text-purple-400 mb-4">{personalInfo.title}</p>
+          <p className="text-xl text-emerald-400 mb-4">{personalInfo.title}</p>
           <div className="flex flex-wrap justify-center gap-4 text-gray-300">
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
@@ -53,7 +53,7 @@ function Resume() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+                  className="flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors"
                 >
                   <IconComponent className="w-5 h-5" />
                   <span>{link.name}</span>
@@ -64,7 +64,7 @@ function Resume() {
             <a
               href={`/${PDF_RESUME_NAME}.pdf`}
               download
-              className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+              className="flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors"
             >
               <Download className="w-5 h-5" />
               <span>Download Resume</span>
@@ -74,21 +74,24 @@ function Resume() {
 
         <main className="space-y-12">
           <section id="experience">
-            <h2 className="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-2">
+            <h2 className="text-3xl font-bold text-white mb-6 border-b border-emerald-800/40 pb-2">
               Experience
             </h2>
             <div className="space-y-8">
               {experience.map((job, index) => (
-                <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
+                <div
+                  key={index}
+                  className="bg-zinc-800/40 border border-zinc-700/50 rounded-lg p-6"
+                >
                   <div className="flex justify-between items-start mb-4">
                     <div>
                       <h3 className="text-xl font-semibold text-white">{job.title}</h3>
-                      <p className="text-blue-400">
+                      <p className="text-teal-400">
                         <a
                           href={job.institutionUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:text-blue-300"
+                          className="hover:text-teal-300"
                         >
                           {job.institution}
                         </a>
@@ -110,21 +113,24 @@ function Resume() {
           </section>
 
           <section id="education">
-            <h2 className="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-2">
+            <h2 className="text-3xl font-bold text-white mb-6 border-b border-emerald-800/40 pb-2">
               Education
             </h2>
             <div className="space-y-6">
               {education.map((school, index) => (
-                <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
+                <div
+                  key={index}
+                  className="bg-zinc-800/40 border border-zinc-700/50 rounded-lg p-6"
+                >
                   <div className="flex justify-between items-start mb-4">
                     <div>
                       <h3 className="text-xl font-semibold text-white">{school.degree}</h3>
-                      <p className="text-blue-400">
+                      <p className="text-teal-400">
                         <a
                           href={school.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:text-blue-300"
+                          className="hover:text-teal-300"
                         >
                           {school.institution}
                         </a>
@@ -147,19 +153,22 @@ function Resume() {
           </section>
 
           <section id="projects">
-            <h2 className="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-2">
+            <h2 className="text-3xl font-bold text-white mb-6 border-b border-emerald-800/40 pb-2">
               Projects
             </h2>
             <div className="space-y-6">
               {portfolioProjects.map((project, index) => (
-                <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
+                <div
+                  key={index}
+                  className="bg-zinc-800/40 border border-zinc-700/50 rounded-lg p-6"
+                >
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="text-xl font-semibold text-white">{project.title}</h3>
                     <a
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-400 hover:text-blue-300"
+                      className="text-teal-400 hover:text-teal-300"
                     >
                       <ExternalLink className="w-5 h-5" />
                     </a>
@@ -173,7 +182,7 @@ function Resume() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-slate-700 text-gray-300 rounded text-xs"
+                        className="px-2 py-1 bg-emerald-900/30 text-gray-300 rounded text-xs"
                       >
                         {tech}
                       </span>
@@ -185,20 +194,20 @@ function Resume() {
           </section>
 
           <section id="skills">
-            <h2 className="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-2">
+            <h2 className="text-3xl font-bold text-white mb-6 border-b border-emerald-800/40 pb-2">
               Technical Skills
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {skills.map((skillCategory, index) => (
                 <div key={index}>
-                  <h3 className="text-lg font-semibold text-purple-400 mb-3">
+                  <h3 className="text-lg font-semibold text-emerald-400 mb-3">
                     {skillCategory.category}
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {skillCategory.skills.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-slate-700 text-gray-300 rounded-full text-sm"
+                        className="px-3 py-1 bg-emerald-900/30 text-gray-300 rounded-full text-sm"
                       >
                         {tech}
                       </span>
