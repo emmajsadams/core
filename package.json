@@ -7,9 +7,9 @@
     "build": "vite build",
     "serve": "vite preview",
     "test": "bun test",
-    "test:coverage": "npx tsx scripts/check-coverage.ts",
+    "test:coverage": "bunx tsx scripts/check-coverage.ts",
     "deploy": "wrangler deploy",
-    "deploy:prod": "NODE_ENV=production pnpm run build && pnpm run generate-pdf && pnpm run deploy",
+    "deploy:prod": "NODE_ENV=production bun run build && bun run generate-pdf && bun run deploy",
     "cf-typegen": "wrangler types",
     "generate-pdf": "tsx scripts/generate-pdf.ts",
     "validate-punctuation": "tsx config/validate-punctuation.ts",
@@ -17,8 +17,8 @@
     "format": "oxfmt --check src config scripts",
     "lint": "oxlint src config scripts",
     "lint:fix": "oxlint --fix src config scripts",
-    "check": "oxlint src config scripts && oxfmt --check src config scripts && npx tsx scripts/check-coverage.ts && pnpm run validate-punctuation",
-    "check:fix": "oxlint --fix src config scripts && oxfmt --write src config scripts && bun test && pnpm run validate-punctuation",
+    "check": "oxlint src config scripts && oxfmt --check src config scripts && bunx tsx scripts/check-coverage.ts && bun run validate-punctuation",
+    "check:fix": "oxlint --fix src config scripts && oxfmt --write src config scripts && bun test && bun run validate-punctuation",
     "favicon": "node scripts/convert-favicon.js",
     "prepare": "husky"
   },
@@ -53,5 +53,8 @@
     "vite": "^7.1.7",
     "web-vitals": "^5.1.0",
     "wrangler": "^4.42.0"
-  }
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
 }

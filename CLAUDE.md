@@ -15,12 +15,12 @@ Every change follows this process:
 1. **Make the requested changes** in the appropriate config/component files
 2. **Verify locally:**
    ```bash
-   pnpm run lint          # oxlint — fix all errors
-   pnpm run format:fix    # oxfmt — auto-format
-   pnpm run test          # bun test — all tests must pass
-   pnpm run test:coverage # bun test --coverage — 80% line + function threshold
-   pnpm run build         # vite — production build must succeed
-   pnpm run generate-pdf  # verify PDF output if config changed
+   bun run lint          # oxlint — fix all errors
+   bun run format:fix    # oxfmt — auto-format
+   bun run test          # bun test — all tests must pass
+   bun run test:coverage # bun test --coverage — 80% line + function threshold
+   bun run build         # vite — production build must succeed
+   bun run generate-pdf  # verify PDF output if config changed
    ```
 3. **Review your own code** against these standards before committing:
    - Types are explicit — no `any` unless unavoidable
@@ -34,7 +34,7 @@ Every change follows this process:
    - PDF and web outputs stay in sync — changes to config must work for both
 4. **Deploy, commit, and push:**
    ```bash
-   pnpm run deploy        # Deploy to Cloudflare
+   bun run deploy        # Deploy to Cloudflare
    git add -A && git commit -m "concise message" && git push
    ```
 
@@ -64,7 +64,7 @@ The same config data powers two outputs:
 - **TailwindCSS 4.x** for styling
 - **TypeScript** for type safety
 - **oxlint** for linting, **oxfmt** for formatting (NOT Biome/Prettier/ESLint)
-- **pnpm** for package management
+- **bun** for package management
 - **Cloudflare Workers** for deployment via Wrangler
 
 ## Code Organization
@@ -97,7 +97,7 @@ public/                 # Static assets including generated PDF
 - ❌ Never add technologies not actually used
 
 ### Code Quality
-- ✅ Run `pnpm run check` before every commit
+- ✅ Run `bun run check` before every commit
 - ✅ Maintain strict TypeScript types
 - ✅ Keep components focused and composable
 - ❌ Don't bypass pre-commit hooks
@@ -107,11 +107,11 @@ public/                 # Static assets including generated PDF
 
 Deployed to **Cloudflare Workers** via Wrangler:
 ```bash
-pnpm run deploy       # Deploy to Cloudflare
-pnpm run deploy:prod  # Build + generate PDF + deploy
+bun run deploy       # Deploy to Cloudflare
+bun run deploy:prod  # Build + generate PDF + deploy
 ```
 
-Pre-commit hooks run `pnpm run check` automatically via Husky.
+Pre-commit hooks run `bun run check` automatically via Husky.
 
 ---
 
