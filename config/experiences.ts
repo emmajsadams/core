@@ -90,7 +90,7 @@ export const CommitteeForChildrenLead: Experience = {
 }
 
 export const TrovFullStack: Experience = {
-  title: 'Senior Software Engineer',
+  title: 'Software Engineer',
   institution: 'Trov',
   institutionUrl: 'https://www.trov.com/',
   location: 'Remote',
