@@ -17,7 +17,8 @@ Every change follows this process:
    ```bash
    pnpm run lint          # oxlint — fix all errors
    pnpm run format:fix    # oxfmt — auto-format
-   pnpm run test          # vitest — all tests must pass
+   pnpm run test          # bun test — all tests must pass
+   pnpm run test:coverage # bun test --coverage — 80% line + function threshold
    pnpm run build         # vite — production build must succeed
    pnpm run generate-pdf  # verify PDF output if config changed
    ```

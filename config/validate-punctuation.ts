@@ -63,15 +63,20 @@ export function validatePunctuation(): ValidationResult {
 }
 
 // Run validation when executed directly
-const result = validatePunctuation()
+if (
+  import.meta.url === `file://${process.argv[1]}` ||
+  process.argv[1]?.endsWith('validate-punctuation.ts')
+) {
+  const result = validatePunctuation()
 
-if (result.isValid) {
-  console.log('✓ All bullet points end with periods')
-  process.exit(0)
-} else {
-  console.error('✗ Punctuation validation failed:\n')
-  for (const error of result.errors) {
-    console.error(`  - ${error}`)
+  if (result.isValid) {
+    console.log('✓ All bullet points end with periods')
+    process.exit(0)
+  } else {
+    console.error('✗ Punctuation validation failed:\n')
+    for (const error of result.errors) {
+      console.error(`  - ${error}`)
+    }
+    process.exit(1)
   }
-  process.exit(1)
 }
