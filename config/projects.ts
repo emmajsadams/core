@@ -33,10 +33,10 @@ export const Minerva: Project = {
 export const Navi: Project = {
   title: 'Navi',
   url: `${PROJECT_URL}/navi`,
-  technologies: ['TypeScript', 'Bun', 'CLI'],
+  technologies: ['TypeScript', 'Bun', 'Anthropic API', 'OpenAI API'],
   description: [
-    'TypeScript TUI agent harness built from scratch to understand AI agent internals: message management, tool execution, context windows, and terminal UI.',
-    'Named after the computers in Serial Experiments Lain.',
+    'From-scratch AI agent harness with interactive TUI, multi-provider streaming (Anthropic, OpenAI), tool execution framework, and context window management with configurable truncation and summarization strategies.',
+    'Features session persistence, built-in tool registry (file I/O, shell exec), token budget tracking, and markdown rendering in a structured terminal UI with real-time streaming.',
   ],
 }
 
