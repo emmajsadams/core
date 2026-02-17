@@ -1,10 +1,21 @@
 import { createRootRoute, HeadContent, Scripts } from '@tanstack/react-router'
-
-// TODO: Fix production builds to disable this
-// import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
-// import { TanStackDevtools } from '@tanstack/react-devtools'
+import React from 'react'
 
 import Header from '../components/Header'
+
+const TanStackDevtools = import.meta.env.DEV
+  ? React.lazy(() =>
+      import('@tanstack/react-devtools').then((m) => ({ default: m.TanStackDevtools }))
+    )
+  : () => null
+
+const TanStackRouterDevtoolsPanel = import.meta.env.DEV
+  ? React.lazy(() =>
+      import('@tanstack/react-router-devtools').then((m) => ({
+        default: m.TanStackRouterDevtoolsPanel,
+      }))
+    )
+  : () => null
 
 import appCss from '../styles.css?url'
 
@@ -52,17 +63,19 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body>
         <Header />
         {children}
-        {/* <TanStackDevtools
-          config={{
-            position: 'bottom-right',
-          }}
-          plugins={[
-            {
-              name: 'Tanstack Router',
-              render: <TanStackRouterDevtoolsPanel />,
-            },
-          ]}
-        /> */}
+        <React.Suspense>
+          <TanStackDevtools
+            config={{
+              position: 'bottom-right',
+            }}
+            plugins={[
+              {
+                name: 'Tanstack Router',
+                render: <TanStackRouterDevtoolsPanel />,
+              },
+            ]}
+          />
+        </React.Suspense>
         <Scripts />
       </body>
     </html>

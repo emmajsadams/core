@@ -4,7 +4,7 @@ A modern portfolio and resume website built with React, TanStack Start, and Tail
 
 ## TODO
 
-- [ ] Fix TanStack dev tools configuration
+- [x] Fix TanStack dev tools configuration
 
 ## Overview
 
