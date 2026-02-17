@@ -30,12 +30,13 @@ export const Minerva: Project = {
   ],
 }
 
-export const TypeScriptDatabase: Project = {
-  title: 'TypeScript Database',
-  url: `${PROJECT_URL}/ts-database`,
-  technologies: ['TypeScript', 'Node.JS'],
+export const Navi: Project = {
+  title: 'Navi',
+  url: `${PROJECT_URL}/navi`,
+  technologies: ['TypeScript', 'Bun', 'CLI'],
   description: [
-    'In-memory transactional database with REPL interface supporting nested transactions (BEGIN/ROLLBACK/COMMIT) and type-safe key-value operations.',
+    'TypeScript TUI agent harness built from scratch to understand AI agent internals: message management, tool execution, context windows, and terminal UI.',
+    'Named after the computers in Serial Experiments Lain.',
   ],
 }
 
@@ -57,4 +58,4 @@ export const Wright: Project = {
   ],
 }
 
-export default [Wright, Sybil, Minerva, TypeScriptDatabase]
+export default [Sybil, Navi, Wright, Minerva]
