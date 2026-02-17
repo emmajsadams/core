@@ -31,7 +31,11 @@ Every change follows this process:
    - Naming is clear and consistent (PascalCase components, camelCase functions/variables)
    - Accessibility basics: semantic HTML, alt text, ARIA where needed
    - PDF and web outputs stay in sync — changes to config must work for both
-4. **Commit and push** with a clear, concise commit message
+4. **Deploy, commit, and push:**
+   ```bash
+   pnpm run deploy        # Deploy to Cloudflare
+   git add -A && git commit -m "concise message" && git push
+   ```
 
 If any step fails, fix the issue before proceeding. Do not skip steps.
 
