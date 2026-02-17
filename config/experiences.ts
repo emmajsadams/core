@@ -77,7 +77,7 @@ export const HumbleBundleLead: Experience = {
 }
 
 export const CommitteeForChildrenLead: Experience = {
-  title: 'Mid-Level Software Engineer',
+  title: 'Senior Software Engineer',
   institution: 'Committee for Children',
   institutionUrl: 'https://www.cfchildren.org',
   location: 'Seattle, WA',
@@ -90,14 +90,14 @@ export const CommitteeForChildrenLead: Experience = {
 }
 
 export const TrovFullStack: Experience = {
-  title: 'Full Stack Software Engineer',
+  title: 'Senior Software Engineer',
   institution: 'Trov',
   institutionUrl: 'https://www.trov.com/',
   location: 'Remote',
   start: 'Jul. 2013',
   end: 'Dec. 2017',
   description: [
-    'Built core on-demand insurance platform from inception using ASP.NET C#, SQL Server, and TypeScript React, enabling users to instantly insure high-value items with pay-per-use pricing model.',
+    'Promoted from Junior to Mid-Level to Senior Software Engineer over four years, building core on-demand insurance platform from inception using ASP.NET C#, SQL Server, and TypeScript React.',
     'Developed claims management, policy administration, and business intelligence systems handling underwriting, premium calculation, and partner data integration for white-label insurance offerings.',
   ],
 }
