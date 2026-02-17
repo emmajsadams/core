@@ -2,7 +2,7 @@
 
 import { renderToBuffer } from '@react-pdf/renderer'
 import { mkdirSync, writeFileSync } from 'fs'
-import { dirname, join } from 'path'
+import { join } from 'path'
 import React from 'react'
 import { PDF_RESUME_NAME } from '../config/personalDetails'
 import { ResumeTemplate } from './pdf-templates/ResumeTemplate'

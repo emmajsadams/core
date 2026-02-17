@@ -13,7 +13,7 @@ interface HeaderProps {
   }>
 }
 
-export const Header: React.FC<HeaderProps> = ({ name, title, email, phone, socialLinks }) => {
+export const Header: React.FC<HeaderProps> = ({ name, _title, email, phone, socialLinks }) => {
   // Filter to get GitHub and LinkedIn links
   const github = socialLinks.find((link) => link.url.includes('github.com'))
   const linkedin = socialLinks.find((link) => link.url.includes('linkedin.com'))

@@ -9,12 +9,13 @@ export interface Project {
   description: string[]
 }
 
-export const Dstruct: Project = {
-  title: 'dstruct',
-  url: `${PROJECT_URL}/dstruct`,
-  technologies: ['TypeScript', 'Docker'],
+export const Sybil: Project = {
+  title: 'SIBYL',
+  url: `${PROJECT_URL}/sibyl`,
+  technologies: ['TypeScript', 'Claude API', 'Node.js'],
   description: [
-    'Type-safe data structures library implementing 15+ collections including Red-Black trees, hash maps, bimaps, and multisets inspired by Java/C# Collections and Google Guava.',
+    'Turn-based grid tactics game where LLM agents execute your prompts instead of direct unit control.',
+    'Features 3v3 matches on a 6x6 grid with six unit classes, per-unit turn order, and prompt compression for efficient AI reasoning.',
   ],
 }
 
@@ -55,4 +56,4 @@ export const Wright: Project = {
   ],
 }
 
-export default [Wright, Minerva, TypeScriptDatabase, Dstruct]
+export default [Wright, Sybil, Minerva, TypeScriptDatabase]

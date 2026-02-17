@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicolo-ribaudo/oxc/refs/heads/oxlintrc-v2-schema/npm/oxlint/configuration_schema.json",
+  "rules": {
+    "no-unused-vars": "off",
+    "no-unused-imports": "off",
+    "no-explicit-any": "off",
+    "no-non-null-assertion": "off",
+    "no-array-index-key": "off",
+    "button-has-type": "off",
+    "exhaustive-deps": "off"
+  },
+  "ignorePatterns": ["dist", "node_modules", ".git", "public", "**/*.gen.*"]
+}
