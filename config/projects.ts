@@ -16,6 +16,7 @@ export const Sybil: Project = {
   description: [
     'Turn-based grid tactics game where LLM agents execute your prompts instead of direct unit control.',
     'Features 3v3 matches on a 6x6 grid with six unit classes, per-unit turn order, and prompt compression for efficient AI reasoning.',
+    'Generates structured training data from every game for fine-tuning and reinforcement learning via SFT, DPO, and GRPO pipelines.',
   ],
 }
 
