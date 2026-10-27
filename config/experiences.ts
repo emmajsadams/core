@@ -8,21 +8,20 @@ export interface Experience {
   description: string[]
 }
 
-// Revised: Oct 6, 2025
 export const Supio: Experience = {
-  title: 'Lead Software Engineer',
+  title: 'Head of Agentic Applications (promoted Jan. 2026)',
   institution: 'Supio',
   institutionUrl: 'https://supio.com',
   location: 'Remote',
   start: 'Feb. 2025',
   end: 'Present',
   description: [
-    'Lead engineering team of 5 delivering AI-powered legal document automation adopted by 50+ law firms within first quarter, driving technical architecture decisions across product, design, and legal stakeholders throughout full product lifecycle.',
-    'Architect production LLM orchestration system in TypeScript integrating Claude and OpenAI APIs with RAG pipelines. Reduced blueprint deployment time from days to hours through optimized prompt engineering and context management.',
-    'Build and deploy agentic AI systems in Python (smolagents, LangChain) for autonomous legal drafting, including expert disclosure, demand letters, and medical summary generation, reducing drafting time from hours to minutes.',
-    'Ship real-time collaborative editing interface with integrated AI chat for contextual document verification and natural-language revisions, improving attorney workflow efficiency.',
-    'Establish engineering standards for CI/CD automation, API design, testing frameworks, and database architecture adopted across development team, improving code quality and deployment velocity.',
-    'Mentor junior engineers on software engineering best practices, architectural design patterns, and code quality standards while maintaining hands-on contribution to critical path features.',
+    'Lead eight direct reports on a team I built and hired, owning sourcing, interviews, final hiring decisions, and closing candidates.',
+    'Led the Supio Agent launch, a complete core frontend rewrite around an integrated agent, and customer migration to the new experience.',
+    'Built the agent platform team and planned infrastructure to run agents at scale, including production background delegated agents, a stateless agent harness, and chat infrastructure.',
+    'Built early prototypes used at the release event and contributed code for communications, RAG, OCR, and filesystems.',
+    'Cut the draft-from-example feature I had worked on to prioritize agent-driven drafting that could ship faster.',
+    'Participate in senior hiring loops across the company and helped one engineer earn a promotion to Senior Engineer.',
   ],
 }
 

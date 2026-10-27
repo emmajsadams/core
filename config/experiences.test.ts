@@ -2,6 +2,18 @@ import { describe, expect, test } from 'bun:test'
 import experiences, { type Experience } from './experiences'
 
 describe('experiences', () => {
+  test('Supio distinguishes the current promotion from the employment start', () => {
+    const supio = experiences[0]
+    expect(supio.title).toBe('Head of Agentic Applications (promoted Jan. 2026)')
+    expect(supio.start).toBe('Feb. 2025')
+    expect(supio.end).toBe('Present')
+    expect(supio.description).toHaveLength(6)
+    expect(supio.description[0]).toContain('eight direct reports')
+    expect(supio.description[1]).toContain('Supio Agent')
+    expect(supio.description[2]).toContain('agent platform team')
+    expect(supio.description.join(' ')).not.toMatch(/50\+|law firms|\d+%/)
+  })
+
   test('exports a non-empty array', () => {
     expect(experiences.length).toBeGreaterThan(0)
   })

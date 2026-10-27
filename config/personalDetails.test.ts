@@ -12,6 +12,10 @@ import {
 } from './personalDetails'
 
 describe('personalDetails', () => {
+  test('headline uses the current Supio title', () => {
+    expect(TITLE).toBe('Head of Agentic Applications')
+  })
+
   test('name is composed of first and last', () => {
     expect(NAME).toBe(`${FIRST_NAME} ${LAST_NAME}`)
   })
